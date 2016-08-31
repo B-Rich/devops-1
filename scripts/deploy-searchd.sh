@@ -24,6 +24,8 @@ echo 'Will rebuild search-engine and deploy in 5 sec ...'
 sleep 5
 
 echo 'Rebuilding ...'
+./configure --clean
+./configure
 make new
 
 pushd indexer/
