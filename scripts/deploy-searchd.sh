@@ -7,7 +7,7 @@ cd "$PROJECT"
 echo 'Pull code  ...'
 git pull
 
-echo 'Will rebuild search-engine and deploy in 5 sec ...'
+echo 'Will kill searchd and unmount in 5 sec ...'
 sleep 5
 
 pushd searchd/
@@ -19,6 +19,9 @@ pushd indexer/
 echo 'Unmount index vdisk ...'
 ./scripts/vdisk-umount.sh
 popd
+
+echo 'Will rebuild search-engine and deploy in 5 sec ...'
+sleep 5
 
 echo 'Rebuilding ...'
 make new
