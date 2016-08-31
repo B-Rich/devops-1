@@ -31,6 +31,9 @@ echo 'Mount index vdisk ...'
 ./scripts/vdisk-mount.sh `whoami` ./tmp
 popd
 
+echo 'Will start searchd in 5 sec ...'
+sleep 5
+
 pushd searchd/
 echo 'Start searchd ...'
 ./scripts/respawn.sh ./run/searchd.out -e -i ../indexer/tmp/ &
