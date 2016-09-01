@@ -25,7 +25,7 @@ make new
 
 pushd indexer/
 echo 'Mount index vdisk ...'
-./scripts/vdisk-mount.sh `whoami` ./tmp
+./scripts/vdisk-mount.sh btrfs
 popd
 
 pushd searchd/
