@@ -39,7 +39,7 @@ sleep 5
 
 pushd searchd/
 echo 'Start searchd ...'
-./scripts/respawn.sh ./run/searchd.out -e -i ../indexer/tmp/ &
+./scripts/respawn.sh ./run/searchd.out -i ../indexer/tmp/ &
 popd
 
 echo 'Deploy done.'
