@@ -16,7 +16,8 @@ echo 'Shutdown searchd ...'
 popd
 
 pushd indexer/
-echo 'Unmount index vdisk ...'
+echo 'Unmount index vdisk in 5 sec ...'
+sleep 5
 ./scripts/vdisk-umount.sh
 popd
 
