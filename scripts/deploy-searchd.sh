@@ -31,7 +31,7 @@ make new
 
 pushd indexer/
 echo 'Mount index vdisk ...'
-./scripts/vdisk-mount.sh btrfs
+./scripts/vdisk-mount.sh reiserfs
 popd
 
 echo 'Will start searchd in 5 sec ...'
@@ -39,7 +39,7 @@ sleep 5
 
 pushd searchd/
 echo 'Start searchd ...'
-./scripts/respawn.sh ./run/searchd.out -i ../indexer/tmp/ &
+./scripts/respawn.sh ./run/searchd.out -i ~/instance1/tmp/ -c 256 &
 popd
 
 echo 'Deploy done.'
